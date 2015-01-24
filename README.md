@@ -6,4 +6,21 @@ The plugin-consumer sub-project uses the plugin
 
 Plugin archive is published to localMaven
 
+```groovy
+plugins {
+  id 'java-gradle-plugin'
+  id 'maven'
+}
+
+group = 'griffio.gradle'
+version = '1.0-SNAPSHOT'
+
+uploadArchives {
+
+  return repositories() {
+    mavenLocal()
+  }
+
+}
+```
 
