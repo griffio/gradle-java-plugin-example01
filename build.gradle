@@ -1,0 +1,15 @@
+plugins {
+  id 'java-gradle-plugin'
+  id 'maven'
+}
+
+group = 'griffio.gradle'
+version = '1.0-SNAPSHOT'
+
+uploadArchives {
+
+  return repositories() {
+    mavenLocal()
+  }
+
+}

@@ -1,0 +1,14 @@
+buildscript {
+  repositories {
+    mavenLocal()
+  }
+
+  dependencies {
+    classpath group: 'griffio.gradle',
+        name: 'JavaAnnotationProcessorPlugin',
+        version: '1.0-SNAPSHOT'
+  }
+
+}
+
+apply plugin: 'griffio.gradle.apt'
