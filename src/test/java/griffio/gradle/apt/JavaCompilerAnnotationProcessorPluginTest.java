@@ -16,8 +16,19 @@ public class JavaCompilerAnnotationProcessorPluginTest {
     }
 
     @Test
+    public void applyPlugin() {
+        JavaCompilerAnnotationProcessorPlugin plugin = project.getPlugins().apply(JavaCompilerAnnotationProcessorPlugin.class);
+        Assert.assertNotNull(plugin);
+    }
+
+    @Test
     public void applyInitTask() throws Exception {
         JavaCompilerAnnotationProcessor task = project.getTasks().create(JavaCompilerAnnotationProcessor.TASK_NAME, JavaCompilerAnnotationProcessor.class);
         Assert.assertNotNull(task);
+    }
+
+    @Test
+    public void isAptSourceSetConfigured() throws Exception {
+        JavaCompilerAnnotationProcessor task = project.getTasks().create(JavaCompilerAnnotationProcessor.TASK_NAME, JavaCompilerAnnotationProcessor.class);
     }
 }

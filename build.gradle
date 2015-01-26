@@ -6,6 +6,16 @@ plugins {
 group = 'griffio.gradle'
 version = '1.0-SNAPSHOT'
 
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  runtime(
+      'com.mysema.querydsl:querydsl-apt:3.6.0'
+  )
+}
+
 uploadArchives {
 
   return repositories() {

@@ -11,4 +11,9 @@ buildscript {
 
 }
 
+repositories {
+  mavenCentral()
+}
+
 apply plugin: 'griffio.gradle.apt'
+
